@@ -1,18 +1,14 @@
 // fetch data
-fetch('https://data.cityofnewyork.us/resource/cwy2-px8b.json')
+fetch('https://data.cityofnewyork.us/resource/cwy2-px8b.json &$limit=' + limit)
+
 .then(response => response.json())
 .then(users => {
     console.log(users);
 })
 
 .catch(err => console.log(err))
-// fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json')
-// .then(response => response.json()) //parting res to json
-// .then(users => {
-//     console.log(users);
-// })
-// // .then(json => console.log(json)) //json data
-// .catch(err => console.log(err)) //handle errors
+
+const limit = 5;
 
 const manhattan = document.getElementById('manhattan')
 const brooklyn = document.getElementById('brooklyn')
@@ -25,3 +21,4 @@ brooklyn.addEventListener('click', () => )
 queens.addEventListener('click', () => )
 statenisland.addEventListener('click', () => )
 bronx.addEventListener('click', () => )
+
